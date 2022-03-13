@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ethers } from 'ethers'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
+import Image from 'next/image';
 import Web3Modal from 'web3modal'
 import web3 from 'web3'
 
