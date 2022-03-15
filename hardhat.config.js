@@ -10,6 +10,10 @@ task("accounts", "Prints the list of accounts", async () => {
   }
 });
 
+const INFURA_URL = 'https://rinkeby.infura.io/v3/90a4dbc8470c40afbd72f1c7326803df';
+
+const PRIVATE_KEY = '8648d368c81948bca5e14f872b161bfbd7f1cf02516d71b3372a7c24d5e7b25d';
+
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
@@ -24,6 +28,10 @@ task("accounts", "Prints the list of accounts", async () => {
   networks: {
     hardhat: {
       chainId: 1337
+    },
+    rinkeby: {
+      url : INFURA_URL,
+      accounts : [`0x${PRIVATE_KEY}`]
     }
   }
 };
